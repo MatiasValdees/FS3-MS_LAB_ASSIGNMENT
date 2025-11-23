@@ -9,10 +9,10 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>cl.duoc</groupId>
-	<artifactId>fullstack3</artifactId>
+	<artifactId>fs3-ms_lab_assignment</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>fullstack3</name>
-	<description>Sumativas FullStack 3</description>
+	<name>fs3-ms_lab_assignment</name>
+	<description>Sumativa FullStack 3</description>
 	<url/>
 	<licenses>
 		<license/>
