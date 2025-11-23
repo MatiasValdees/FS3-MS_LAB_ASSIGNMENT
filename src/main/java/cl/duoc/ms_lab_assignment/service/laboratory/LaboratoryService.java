@@ -66,4 +66,15 @@ public class LaboratoryService implements ILaboratoryService {
         LaboratoryEntity updated = repository.save(laboratoryFound);
         return LaboratoryResponse.fromEntity(updated);
     }
+
+    @Transactional
+    @Override
+    public void deleteById(Long id) {
+        log.info("Eliminado laboratorio por id: {}",id);
+        if (!repository.existsById(id)){
+            throw new EntityNotFoundException("Laboratorio no existe id: "+id);
+        }
+        repository.deleteById(id);
+        log.info("Laboratorio eliminado");
+    }
 }

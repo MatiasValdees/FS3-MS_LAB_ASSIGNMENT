@@ -11,4 +11,6 @@ public interface ILaboratoryService {
     LaboratoryResponse findById(Long id);
     LaboratoryResponse create (LaboratoryCreateRequest request);
     LaboratoryResponse update (LaboratoryUpdateRequest request);
+
+    void deleteById(Long id);
 }

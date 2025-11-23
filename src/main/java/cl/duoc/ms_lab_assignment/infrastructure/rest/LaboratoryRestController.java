@@ -46,6 +46,11 @@ public class LaboratoryRestController {
         LaboratoryResponse response = service.findById(id);
         return new WrapperResponse<>(response);
     }
-    
-    
+
+    @DeleteMapping("deleteById/{id}")
+    public WrapperResponse<String> deleteById (@PathVariable Long id){
+        log.info("[DELETE] Solicitud de eliminar laboratorio por id: {}",id);
+         service.deleteById(id);
+        return new WrapperResponse<>("Eliminado correctamente");
+    }
 }
