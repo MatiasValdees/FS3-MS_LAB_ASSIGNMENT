@@ -3,7 +3,7 @@ package cl.duoc.ms_lab_assignment.infrastructure.rest;
 import cl.duoc.ms_lab_assignment.infrastructure.dtos.patient.PatientCreateRequest;
 import cl.duoc.ms_lab_assignment.infrastructure.dtos.patient.PatientResponse;
 import cl.duoc.ms_lab_assignment.infrastructure.dtos.patient.PatientUpdateRequest;
-import cl.duoc.ms_lab_assignment.commons.wrapper.WrapperResponse;
+import cl.duoc.ms_lab_assignment.infrastructure.dtos.wrapper.WrapperResponse;
 import cl.duoc.ms_lab_assignment.service.patient.IPatientService;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;

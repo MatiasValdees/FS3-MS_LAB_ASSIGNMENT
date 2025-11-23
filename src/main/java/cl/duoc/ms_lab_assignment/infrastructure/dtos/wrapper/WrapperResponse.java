@@ -1,4 +1,4 @@
-package cl.duoc.ms_lab_assignment.commons.wrapper;
+package cl.duoc.ms_lab_assignment.infrastructure.dtos.wrapper;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;

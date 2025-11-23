@@ -3,7 +3,7 @@ package cl.duoc.ms_lab_assignment.infrastructure.rest;
 import cl.duoc.ms_lab_assignment.infrastructure.dtos.analysis.AnalysisCreateRequest;
 import cl.duoc.ms_lab_assignment.infrastructure.dtos.analysis.AnalysisResponse;
 import cl.duoc.ms_lab_assignment.infrastructure.dtos.analysis.AnalysisUpdateRequest;
-import cl.duoc.ms_lab_assignment.commons.wrapper.WrapperResponse;
+import cl.duoc.ms_lab_assignment.infrastructure.dtos.wrapper.WrapperResponse;
 import cl.duoc.ms_lab_assignment.service.analysis.IAnalysisService;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;

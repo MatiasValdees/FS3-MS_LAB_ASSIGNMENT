@@ -1,6 +1,6 @@
 package cl.duoc.ms_lab_assignment.infrastructure.exceptions;
 
-import cl.duoc.ms_lab_assignment.commons.wrapper.WrapperResponse;
+import cl.duoc.ms_lab_assignment.infrastructure.dtos.wrapper.WrapperResponse;
 import cl.duoc.ms_lab_assignment.domain.exceptions.EntityNotFoundException;
 import cl.duoc.ms_lab_assignment.domain.exceptions.InvalidCredentialException;
 import cl.duoc.ms_lab_assignment.domain.exceptions.UsernameException;
