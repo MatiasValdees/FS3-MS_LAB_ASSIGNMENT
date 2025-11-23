@@ -94,6 +94,7 @@ public class AssignmentService implements IAssignmentService{
                 .toList();
     }
 
+    @Transactional(readOnly = true)
     @Override
     public AssignmentResponse findById(Long id) {
         log.info("Obteniendo asignación por id: {}",id);
@@ -101,5 +102,16 @@ public class AssignmentService implements IAssignmentService{
                 .orElseThrow(()->new EntityNotFoundException(String.format("Asignación con id: %s, no existe",id)));
         log.info("Asignación encontrada");
         return AssignmentResponse.fromEntity(found);
+    }
+
+    @Transactional
+    @Override
+    public void deleteById(Long id) {
+        log.info("Eliminando asignacion id: {}",id);
+        if(!repository.existsById(id)){
+            throw new EntityNotFoundException("");
+        }
+        repository.deleteById(id);
+        log.info("Asignacion eliminada");
     }
 }

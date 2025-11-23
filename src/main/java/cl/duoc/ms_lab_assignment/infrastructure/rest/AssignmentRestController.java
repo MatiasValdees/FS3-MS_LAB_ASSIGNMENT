@@ -46,4 +46,12 @@ public class AssignmentRestController {
         AssignmentResponse response = service.findById(id);
         return new WrapperResponse<>(response);
     }
+
+    @DeleteMapping("/deleteById/{id}")
+    public WrapperResponse<String> deleteById (@PathVariable Long id){
+        log.info("[DELETE] Solicitud de eliminar asignación por id: {}",id);
+        service.deleteById(id);
+        return new WrapperResponse<>("Eliminado correctamente");
+    }
+
 }

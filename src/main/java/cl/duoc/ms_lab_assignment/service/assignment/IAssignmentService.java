@@ -11,5 +11,6 @@ public interface IAssignmentService {
     AssignmentResponse updateStatus (AssignmentUpdateRequest request);
     List<AssignmentResponse> findAll();
     AssignmentResponse findById(Long id);
+    void deleteById(Long id);
 
 }
