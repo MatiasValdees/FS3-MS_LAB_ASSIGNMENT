@@ -47,4 +47,12 @@ public class AnalysisRestController {
         return new WrapperResponse<>(response);
     }
 
+    @DeleteMapping("deleteById/{id}")
+    public WrapperResponse<String> deleteById (@PathVariable Long id){
+        log.info("[DELETE] Solicitud de eliminación de analisis por id: {}",id);
+         service.deleteById(id);
+         String response = "Eliminado correctamente" ;
+        return new WrapperResponse<>(response);
+    }
+
 }

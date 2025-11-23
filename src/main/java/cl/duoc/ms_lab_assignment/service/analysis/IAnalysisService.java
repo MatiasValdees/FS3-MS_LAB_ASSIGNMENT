@@ -11,4 +11,5 @@ public interface IAnalysisService {
     AnalysisResponse update (AnalysisUpdateRequest request);
     List<AnalysisResponse> findAll();
     AnalysisResponse findById(Long id);
+    void deleteById(Long id);
 }

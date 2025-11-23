@@ -67,4 +67,14 @@ public class AnalysisService implements IAnalysisService{
                 .orElseThrow(()-> new EntityNotFoundException(String.format("Analisís no encontrado id: %s",id)));
         return AnalysisResponse.fromEntity(found);
     }
+
+    @Transactional(readOnly = true)
+    @Override
+    public void deleteById(Long id) {
+        log.info("Eliminando analisis con id: {}",id);
+        if(!repository.existsById(id)) {
+            throw new EntityNotFoundException("No existe Analisis con id: " + id);
+        }
+        repository.deleteById(id);
+    }
 }
