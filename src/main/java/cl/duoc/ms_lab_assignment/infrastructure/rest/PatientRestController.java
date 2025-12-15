@@ -22,7 +22,7 @@ public class PatientRestController {
 
     @GetMapping("findById/{id}")
     public WrapperResponse<PatientResponse> readById (@PathVariable Long id){
-        log.info("[POST] - Solicitud de obtención de paciente por id");
+        log.info("[GET] - Solicitud de obtención de paciente por id");
         PatientResponse response = service.findById(id);
         return new WrapperResponse<>(response);
     }
@@ -32,14 +32,14 @@ public class PatientRestController {
         if (!rut.matches("\\d{7,8}-[0-9kK]")) {
             throw new IllegalArgumentException("RUT inválido. Formato correcto: 7 u 8 dígitos, guion y dígito verificador (Ej: 19611371-9)");
         }
-        log.info("[POST] - Solicitud de obtención de paciente por rut");
+        log.info("[GET] - Solicitud de obtención de paciente por rut");
         PatientResponse response = service.findByRut(rut);
         return new WrapperResponse<>(response);
     }
 
     @GetMapping
     public WrapperResponse<List<PatientResponse>> readAll (){
-        log.info("[POST] - Solicitud de obtención de todos los paciente");
+        log.info("[GET] - Solicitud de obtención de todos los paciente");
         List<PatientResponse> response = service.findAll();
         return new WrapperResponse<>(response);
     }
@@ -53,7 +53,7 @@ public class PatientRestController {
 
     @PutMapping
     public WrapperResponse<PatientResponse> update (@Valid @RequestBody PatientUpdateRequest request){
-        log.info("[POST] - Solicitud de actualización de paciente");
+        log.info("[PUT] - Solicitud de actualización de paciente");
         PatientResponse response = service.update(request);
         return new WrapperResponse<>(response);
     }
