@@ -58,7 +58,7 @@ public class PatientRestController {
         return new WrapperResponse<>(response);
     }
 
-    @DeleteMapping("{id}")
+    @DeleteMapping("deleteById/{id}")
     public ResponseEntity<Void> delete (@PathVariable Long id){
         log.info("[POST] - Solicitud de eliminación de paciente por id: {}",id);
         service.delete(id);
